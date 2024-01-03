@@ -3,12 +3,11 @@ import {Link, Route, Routes} from 'react-router-dom';
 import './styles/index.scss';
 import {AboutPageAsync} from "../pages/AboutPage/ui/AboutPage.async";
 import {MainPageAsync} from "../pages/MainPage/ui/MainPage.async";
-import {useTheme} from "./providers/ThemeProvider/lib/useTheme";
+import {useTheme} from "./providers/ThemeProvider";
 import {classNames} from "../shared/lib/classNames/classNames";
 
 const App = () => {
   const {theme, toggleTheme} = useTheme();
-  const bool = true;
 
   return (
       <div className={classNames('app', {}, [theme])}>
