@@ -3,16 +3,18 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "ES5",
+    "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
