@@ -7,11 +7,11 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
-    className?: string;
-    children?: ReactNode;
-    isOpen?: boolean;
-    onClose?: () => void;
-    lazy?: boolean;
+  className?: string;
+  children?: ReactNode;
+  isOpen?: boolean;
+  onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
@@ -77,17 +77,15 @@ export const Modal = (props: ModalProps) => {
     }
 
     return (
-        <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div
-                        className={cls.content}
-                        onClick={onContentClick}
-                    >
-                        {children}
-                    </div>
+        <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+            <div className={cls.overlay} onClick={closeHandler}>
+                <div
+                    className={cls.content}
+                    onClick={onContentClick}
+                >
+                    {children}
                 </div>
             </div>
-        </Portal>
+        </div>
     );
 };
