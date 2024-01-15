@@ -88,11 +88,19 @@ export const SquareSizeL: Story = {
     },
 };
 
-export const SquareXl: Story = {
+export const SquareSizeXl: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.BACKGROUND_INVERTED,
         square: true,
         size: ButtonSize.XL,
+    },
+};
+
+export const Disabled: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
     },
 };
