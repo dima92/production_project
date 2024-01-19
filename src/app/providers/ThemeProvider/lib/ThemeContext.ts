@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 
 export enum Theme {
   LIGHT = 'app_light_theme',
