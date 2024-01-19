@@ -40,6 +40,7 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'no-console': 'off',
+    'no-undef': 'off',
     "func-names": 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -61,6 +62,7 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
   overrides: [
     {
