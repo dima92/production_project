@@ -43,7 +43,9 @@ module.exports = {
     'consistent-return': 'off',
   },
   globals: {
-    __IS_DEV__: true, __API__: true,
+    __IS_DEV__: true,
+    __API__: true,
+    __PROJECT__: true,
   },
   overrides: [{
     files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
