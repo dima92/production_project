@@ -7,27 +7,27 @@ import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
-    title: 'pages/ProfilePage',
-    component: ProfilePage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+  title: 'pages/ProfilePage',
+  component: ProfilePage,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as Meta<typeof ProfilePage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {},
-    decorators: [
-        StoreDecorator({}),
-    ],
+  args: {},
+  decorators: [
+    StoreDecorator({}),
+  ],
 };
 
 export const Dark: Story = {
-    args: {},
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-        StoreDecorator({}),
-    ],
+  args: {},
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
+  ],
 };
