@@ -18,9 +18,9 @@ server.use(async (req, res, next) => {
 
 server.post('/login', (req, res) => {
   try {
-    const {username, password} = req.body;
+    const { username, password } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
-    const {users = []} = db;
+    const { users = [] } = db;
 
     const userFromBd = users.find(
       (user) => user.username === username && user.password === password,
@@ -30,16 +30,16 @@ server.post('/login', (req, res) => {
       return res.json(userFromBd);
     }
 
-    return res.status(403).json({message: 'User not found'});
+    return res.status(403).json({ message: 'User not found' });
   } catch (e) {
     console.log(e);
-    return res.status(500).json({message: e.message});
+    return res.status(500).json({ message: e.message });
   }
 });
 
 server.use((req, res, next) => {
   if (!req.headers.authorization) {
-    return res.status(403).json({message: 'AUTH ERROR'});
+    return res.status(403).json({ message: 'AUTH ERROR' });
   }
 
   next();
