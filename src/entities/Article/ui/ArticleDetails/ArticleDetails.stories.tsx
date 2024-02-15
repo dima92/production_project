@@ -7,7 +7,7 @@ import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/arti
 import { ArticleDetails } from './ArticleDetails';
 
 const meta = {
-  title: 'shared/ArticleDetails',
+  title: 'entities/ArticleDetails',
   component: ArticleDetails,
   parameters: {
     layout: 'centered',
