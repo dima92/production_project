@@ -32,7 +32,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': ['error', {
-      markupOnly: true, ignoreAttribute: ['data-testid', 'to'],
+      markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'item', 'text'],
     }],
     'max-len': ['error', { ignoreComments: true, code: 120 }],
     'jsx-a11y/no-static-element-interactions': 'off',
